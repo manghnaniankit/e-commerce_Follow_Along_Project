@@ -8,3 +8,8 @@ Database Schema Design: I will explore MongoDB to design data models that are ef
 Backend Development: I will set up a server with Node.js and Express.js to handle requests, API routes, and interact with the database.
 Frontend with React: I will use React to build dynamic, user-friendly interfaces, like product lists and shopping carts.
 ~Ankit Manghnani
+
+
+Milestone 2: Project Setup & Login Page
+
+In this milestone, I set up the project structure with separate frontend (React) and backend (Node.js) directories. I configured Tailwind CSS for styling and built a functional Login Page. The project is now ready for further development in upcoming milestones.
