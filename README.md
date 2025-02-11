@@ -1,101 +1,108 @@
-# Ecommerce-Follow-Along
-
-Welcome to the Ecommerce Follow-Along project, a hands-on journey to build a full-fledged E-Commerce Application from scratch using the MERN stack (MongoDB, Express.js, React.js, and Node.js).
-
-## Table of Contents
-- [Project Overview](#project-overview)
-- [Milestone 1: Project Overview](#milestone-1-project-overview)
-- [Milestone 2: Project Setup and Login Page](#milestone-2-project-setup-and-login-page)
-- [Milestone 3: Project Setup for Backend](#milestone-3-project-setup-for-backend)
-- [Milestone 4: Creating User Model and Controller](#milestone-4-creating-user-model-and-controller)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [License](#license)
-
-## Project Overview
-The goal of this project is to provide a real-world experience in building a complete E-commerce application. Using the MERN stack, the project will cover various essential features, including user authentication, product management, and order handling.
+# e-commerce-follow-along
+### *Project Overview: E-Commerce Application (MERN Stack)*
+This project will guide you through building a full-stack e-commerce web application using the *MERN stack* (MongoDB, Express.js, React.js, Node.js). You will learn how to implement key functionalities such as *user authentication, **product management, and **order handling* while gaining hands-on experience with REST APIs, database schema design, and frontend development with React.
 
 ---
 
-## Milestone 1: Project Overview
-In the first milestone, we set up the project's foundation:
-- Introduced the overall structure of a MERN application.
-- Initialized the GitHub repository.
-- Provided a brief project overview and objectives for the upcoming milestones.
+### *Key Features:*
+- *User Authentication:* Secure login and registration with JWT.
+- *Product Management:* CRUD operations for products, with features like filtering and sorting.
+- *Order Handling:* Users can place and view orders.
+- *REST API:* Build scalable API endpoints for managing users, products, and orders.
+- *Frontend:* Responsive UI built with React for a smooth user experience.
 
 ---
 
-## Milestone 2: Project Setup and Login Page
-In the second milestone, we did the following:
-- Organized the project structure with separate frontend and backend directories.
-- Set up a React app for the frontend.
-- Configured a Node.js server for the backend.
-- Implemented Tailwind CSS for styling.
-- Developed a functional Login Page.
+### *Core Concepts:*
+- *MERN Stack*: Using MongoDB, Express.js, React.js, and Node.js for full-stack development.
+- *REST APIs*: Design and develop API endpoints for user and product management.
+- *Authentication*: Implement secure login and session management.
+- *Database Schema*: Design MongoDB schemas for users, products, and orders.
 
 ---
 
-## Milestone 3: Project Setup for Backend
-In the third milestone, we focused on backend development:
-- Created a structured folder hierarchy for the backend code.
-- Initialized the Node.js server and configured it to handle API requests.
-- Connected the application to MongoDB.
-- Implemented basic error handling.
+### *Next Steps:* 
+1. Set up the *development environment* and install dependencies.
+2. Implement a *basic server* using Node.js and Express.
+3. Start building the *React frontend* and connect it to the backend.
+4. Design *MongoDB schemas* for structured data storage.
 
----
+This project will help you master the full-stack development process, from database to frontend, with a focus on scalability and user interaction.
 
-## Milestone 4: Creating User Model and Controller
-In the fourth milestone, we added more functionality:
-- Created a User Model to define the structure of user data.
-- Developed a User Controller to manage user-related operations.
-- Enabled file uploads using Multer for handling user image uploads.
+ ### Milestone 2 ###
+1. Created a structured folder hierarchy for the project.
+2. Set up a React app for the frontend.
+3. Set up a Node.js server for the backend.
+4. Configured Tailwind CSS for streamlined styling.
+5. Added optional extensions for improving development efficiency.
+6. Built a functional and styled Login Page for the frontend.
 
----
+### Milestone 3 ###
 
-MILESTONE 5 :-
-Created a Sign-Up Page in React.
+1. Set up dedicated folders for organizing backend code effectively.
+2. Initialized and configured a Node.js server to handle API requests.
+3. Connected the application to MongoDB to store and manage data.
+4. Implemented basic error handling to ensure smooth server operation.
 
-Implemented form validation for: Name (required) Email (valid format required) Password (minimum 2 characters) Password Confirmation (must match password)
+### Milestone 4 ###
 
-Used React Router for navigation.
+This milestone focuses on implementing user data handling and file upload functionality. 
 
-Milestone 6 :-
-Milestone 6: User Registration and Authentication
-User Creation Endpoint (/create-user): Implemented an endpoint to create a new user. Validated the email to ensure the user doesn’t already exist. Successfully handled file uploads (e.g., avatar) using multer.
+Key achievements include:  
+1. User Model: Defined a blueprint for storing user data in the database, ensuring a consistent structure for user-related information.  
+2. User Controller: Developed logic to manage user operations such as adding new users and retrieving user information.  
+3. File Upload Setup: Integrated and configured Multer to enable file uploads (e.g., user profile images) and store them efficiently in the application.  
 
-Password Hashing: Used bcryptjs to hash passwords before saving them to the database, ensuring secure password storage.
+By completing this milestone, the application now supports user management and file uploads, enhancing its core functionality.
 
-Error Handling: Incorporated centralized error handling using a custom ErrorHandler class. Applied catchAsyncErrors middleware to manage asynchronous errors in the routes.
+## MILESTONE 5 :-
+1. Created a Sign-Up Page in React.
+2. Implemented form validation for:
+    Name (required)
+    Email (valid format required)
+    Password (minimum 2 characters)
+    Password Confirmation (must match password)
 
-User Data Storage: Stored user details (e.g., name, email, password, avatar) in MongoDB with encrypted password.
+4. Used React Router for navigation.
 
-Email Notification (Optional): Integrated an email notification system to send a welcome email to the user after successful registration (using sendMail).
+## Milestone 6 :-
+## Milestone 6: User Registration and Authentication
+1. User Creation Endpoint (/create-user):
+ Implemented an endpoint to create a new user.
+ Validated the email to ensure the user doesn’t already exist.
+ Successfully handled file uploads (e.g., avatar) using multer.
 
-JWT Token Generation: Added a method to generate JWT tokens upon user login (for future use in authentication routes).
+ 2. Password Hashing:
+ Used bcryptjs to hash passwords before saving them to the database, ensuring secure password storage.
+
+4. Error Handling:
+Incorporated centralized error handling using a custom ErrorHandler class.
+Applied catchAsyncErrors middleware to manage asynchronous errors in the routes.
+
+5. User Data Storage:
+Stored user details (e.g., name, email, password, avatar) in MongoDB with encrypted password.
+
+6. Email Notification (Optional):
+Integrated an email notification system to send a welcome email to the user after successful registration (using sendMail).
+
+7. JWT Token Generation:
+Added a method to generate JWT tokens upon user login (for future use in authentication routes).
 
 
----
-
-Milestone 7: Create Login Endpoint
-Task Completed ✅ Implemented a login API endpoint. Accepted user credentials (email/username and password). Retrieved the corresponding user from the database. Validated the password using bcrypt. Compared the entered password with the stored hashed password for authentication. Generated a JWT token upon successful login for authentication. Implemented error handling for invalid credentials and server errors.
-
----
-
-
-## Technologies Used
-- **MongoDB**: NoSQL database for data storage.
-- **Express.js**: Web application framework for Node.js.
-- **React.js**: Frontend library for building user interfaces.
-- **Node.js**: JavaScript runtime for server-side programming.
-- **Tailwind CSS**: Utility-first CSS framework for styling.
-- **Multer**: Middleware for handling file uploads. 
-
----
+### Milestone 7: Create Login Endpoint
+Task Completed ✅
+Implemented a login API endpoint.
+Accepted user credentials (email/username and password).
+Retrieved the corresponding user from the database.
+Validated the password using bcrypt.
+Compared the entered password with the stored hashed password for authentication.
+Generated a JWT token upon successful login for authentication.
+Implemented error handling for invalid credentials and server errors.
 
 
-## Installation
-To get started with this project, clone the repository and install the required dependencies:
-
-### Clone the Repository
-```bash
-git clone https://github.com/YOUR_USERNAME/Ecommerce-Follow-Along.git
+## Milestone -8 Progress:
+Three files were made:
+1) Product.jsx in Components/auth to store info. about product details.
+2) user.js
+3) data/js
+We have createrd a reusable card component with props for product details.
