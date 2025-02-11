@@ -52,6 +52,28 @@ In the fourth milestone, we added more functionality:
 
 ---
 
+MILESTONE 5 :-
+Created a Sign-Up Page in React.
+
+Implemented form validation for: Name (required) Email (valid format required) Password (minimum 2 characters) Password Confirmation (must match password)
+
+Used React Router for navigation.
+
+Milestone 6 :-
+Milestone 6: User Registration and Authentication
+User Creation Endpoint (/create-user): Implemented an endpoint to create a new user. Validated the email to ensure the user doesn’t already exist. Successfully handled file uploads (e.g., avatar) using multer.
+
+Password Hashing: Used bcryptjs to hash passwords before saving them to the database, ensuring secure password storage.
+
+Error Handling: Incorporated centralized error handling using a custom ErrorHandler class. Applied catchAsyncErrors middleware to manage asynchronous errors in the routes.
+
+User Data Storage: Stored user details (e.g., name, email, password, avatar) in MongoDB with encrypted password.
+
+Email Notification (Optional): Integrated an email notification system to send a welcome email to the user after successful registration (using sendMail).
+
+JWT Token Generation: Added a method to generate JWT tokens upon user login (for future use in authentication routes).
+
+
 ## Technologies Used
 - **MongoDB**: NoSQL database for data storage.
 - **Express.js**: Web application framework for Node.js.
@@ -61,6 +83,7 @@ In the fourth milestone, we added more functionality:
 - **Multer**: Middleware for handling file uploads. 
 
 ---
+
 
 ## Installation
 To get started with this project, clone the repository and install the required dependencies:
