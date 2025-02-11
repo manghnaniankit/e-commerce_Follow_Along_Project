@@ -1,26 +1,41 @@
+// backend/app.js
+
 const express = require("express");
+const path = require("path");
+const cors = require("cors");
+const cookieParser = require("cookie-parser");
+const bodyParser = require("body-parser");
+const ErrorHandler = require("./middleware/error");
+
 const app = express();
-const ErrorHandler = require('./utlis/ErrorHandler');
-// import ErrorHandler from './utils/ErrorHandler.js';
 
-// Config
-if (process.env.NODE_ENV !== "PRODUCTION") {
-    require("dotenv").config({
-        path: "config/.env"
-    });
-}
+// Middleware
+app.use(express.json());
+app.use(cookieParser());
 
-app.use((err, req, res, next) => {
-    if (err instanceof ErrorHandler) {
-        // Custom error handling logic for ErrorHandler instance
-        return res.status(err.statusCode || 500).json({
-            message: err.message,
-            stack: err.stack
-        });
-    }
+// Configure CORS to allow requests from React frontend
+app.use(
+  cors({
+    origin: "http://localhost:3000", // Update this if your frontend is hosted elsewhere
+    credentials: true, // Enable if you need to send cookies or authentication headers
+  })
+);
 
-    // Default error handling if not an instance of ErrorHandler
-    res.status(500).json({ message: "Internal Server Error" });
-});
+app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
+
+// Serve static files for uploads and products
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+app.use("/products", express.static(path.join(__dirname, "products")));
+
+// Import Routes
+const userRoutes = require("./controller/user");
+const productRoutes = require("./controller/product");
+
+// Route Handling
+app.use("/api/v2/user", userRoutes);
+app.use("/api/v2/product", productRoutes);
+
+// Error Handling Middleware
+app.use(ErrorHandler);
 
 module.exports = app;
