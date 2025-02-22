@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Product from "../components/auth/Product";
 
 export default function MyProducts() {
@@ -11,7 +11,7 @@ export default function MyProducts() {
         if (!email) return;
         setLoading(true);
         setError(null);
-        fetch(`http://localhost:5000/api/v2/product/my-products?email=${email}`)
+        fetch(`http://localhost:8000/api/v2/product/my-products?email=${email}`)
             .then((res) => {
                 if (!res.ok) {
                     throw new Error(`HTTP error! status: ${res.status}`);
@@ -58,5 +58,5 @@ export default function MyProducts() {
                 ))}
             </div>
         </div>
-    );
+);
 }
