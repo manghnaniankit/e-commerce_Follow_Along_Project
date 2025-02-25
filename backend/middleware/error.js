@@ -1,6 +1,6 @@
 // Import the ErrorHandler class
 // This custom class is used to create and handle application-specific errors.
-const ErrorHandler = require("../utlis/ErrorHandler");
+const ErrorHandler = require("../utils/ErrorHandler");
 // Export the error-handling middleware
 // This function acts as middleware to handle errors in the application and provide appropriate responses.
 module.exports = (err, req, res, next) => {
